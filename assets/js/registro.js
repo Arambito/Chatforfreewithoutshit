@@ -38,7 +38,6 @@ cBoton.onclick = ()=>{
     xhr.send(formChatData);
 }
 
-function previewImage() {
   const inputImagen = document.getElementById('imagen_usuario');
   const preview = document.getElementById('preview');
   
@@ -54,5 +53,4 @@ function previewImage() {
       preview.innerHTML = '';
     }
   });
-}
 

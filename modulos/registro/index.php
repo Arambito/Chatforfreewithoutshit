@@ -33,7 +33,7 @@
           <i class="fas fa-eye"></i>
         </div>
         <div>
-          <input type="file" class="select-image" id="imagen_usuario" name="imagen_usuario" onchange="previewImage()" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>          
+          <input type="file" class="select-image" id="imagen_usuario" name="imagen_usuario" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>          
           <label for="imagen_usuario">
             <span class="field image">Seleccionar imagen</span>
           </label>
