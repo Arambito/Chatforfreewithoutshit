@@ -32,13 +32,16 @@
           <input type="password" name="contrasena_usuario" placeholder="Ingresa tu contraseña" required>
           <i class="fas fa-eye"></i>
         </div>
+        
         <div>
+          <input type="file" class="select-image" id="imagen_usuario" name="imagen_usuario" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>          
           <label for="imagen_usuario" class="image-label">
-            <span class="field image">Seleccionar imagen</span>
-            <input type="file" class="select-image" id="imagen_usuario" name="imagen_usuario" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>
+            <span class="select-text">Seleccionar imagen</span>
+            <div id="preview" class="preview-img"></div>
+            <span class="file-name">Nombre del archivo.jpg</span>
           </label>
-          <div id="preview" class="preview-img"></div>
         </div>
+
         <div class="field button">
           <input type="submit" name="submit" value="Registrar">
         </div>
