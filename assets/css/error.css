@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/** Styles for the 403 Page **/
+
+.particle-error,
+.permission_denied,
+#tsparticles {
+    width: 100%;
+    height: 100%;
+    margin: 0px !important;
+}
+
+#tsparticles {
+    position: fixed !important;
+    opacity: 0.23;
+}
+
+.permission_denied {
+    background: #231f20 !important
+}
+
+.permission_denied a {
+    text-decoration: none;
+}
+
+.denied__wrapper {
+    max-width: 390px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 8vh;
+}
+
+.permission_denied h1 {
+    text-align: center;
+    color: #fff;
+    font-family: "Dosis", sans-serif;
+    font-size: 100px;
+    margin-bottom: 0px;
+    font-weight: 800;
+}
+
+.permission_denied h3 {
+    text-align: center;
+    color: #fff;
+    font-size: 19px;
+    line-height: 23px;
+    max-width: 330px;
+    margin: 0px auto 30px auto;
+    font-family: "Dosis", sans-serif;
+    font-weight: 400;
+}
+
+.permission_denied h3 span {
+    position: relative;
+    width: 65px;
+    display: inline-block;
+}
+
+.permission_denied h3 span:after {
+    content: "";
+    border-bottom: 3px solid #ffbb39;
+    position: absolute;
+    left: 0;
+    top: 43%;
+    width: 100%;
+}
+
+.denied__link {
+    background: none;
+    color: #fff;
+    padding: 12px 0px 10px 0px;
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: 7px;
+    width: 150px;
+    font-size: 15px;
+    text-align: center;
+    margin: 0 auto;
+    vertical-align: middle;
+    display: block;
+    margin-bottom: 40px;
+    margin-top: 25px;
+    font-family: "Dosis", sans-serif;
+    font-weight: 400;
+}
+
+.btn{
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+  background: #ffffff;
+  color: #231f20;
+  text-align: center;
+  padding: 12px 0px 10px 0px;
+  border-radius: 50px;
+  font-size: 20px;
+  transition: all 0.2s ease;
+  vertical-align: middle;
+  display: block;
+  margin-bottom: 40px;
+  margin-top: 25px;
+}
+
+.btn:hover{
+  background: #231f20;
+  color: #fff;
+}
+
+
+.permission_denied .stars {
+    animation: sparkle 1.6s infinite ease-in-out alternate;
+}
+
+/* CSS para el footer */
+footer {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .footer-text {
+    display: inline-block;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #999;
+    border-top: 1px solid #eee;
+  }
+
+  .footer-text span {
+    font-weight: bold;
+  }
+  
+  
+  
+  
+  .heart {
+    color: #e74c3c;
+    font-size: 20px;
+  }
+  
+
+
+@keyframes sparkle {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.3;
+    }
+}
+
+@media (max-width: 600px) {
+    .permission_denied h1 {
+        font-size: 75px;
+    }
+    .permission_denied h3 {
+        font-size: 16px;
+        width: 200px;
+        margin: 0 auto;
+        line-height: 23px;
+    }
+    .permission_denied h3 span {
+        width: 60px;
+    }
+    #astronaut {
+        width: 35px;
+        right: 40px;
+        top: 170px;
+    }
+}
+
+
+
+
+@keyframes hover {
+    0% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(-3px);
+    }
+}
+
+
