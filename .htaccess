@@ -13,6 +13,7 @@ ErrorDocument 403 /modulos/error404/index.php
 ErrorDocument 404 /modulos/error404/index.php
 ErrorDocument 500 /modulos/error404/index.php
 
+RewriteRule ^error404(|/)$ /modulos/error404/index.php
 
 RewriteRule ^(|/)$ /modulos/login/index.php
 RewriteRule ^index(|/)$ /modulos/login/index.php
