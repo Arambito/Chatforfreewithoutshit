@@ -36,8 +36,9 @@
           <input type="file" class="select-image" id="imagen_usuario" name="imagen_usuario" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>          
           <label for="imagen_usuario">
             <span class="field image">Seleccionar imagen</span>
+            <div id="preview" class="preview-img"></div> <!-- Div para mostrar la vista previa de la imagen -->
           </label>
-          <div id="preview" class="preview-img"></div> <!-- Div para mostrar la vista previa de la imagen -->
+          
         </div>
         <div class="field button">
           <input type="submit" name="submit" value="Registrar">
