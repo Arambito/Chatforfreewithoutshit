@@ -160,6 +160,11 @@ body{
   height: 50px;
   width: 50px;
 }
+
+.preview-img img {
+  height: 50px;
+  width: 50px;
+}
 :is(.users, .users-list) .content{
   display: flex;
   align-items: center;
