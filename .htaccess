@@ -4,14 +4,15 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-# Reglas rapidas
-ErrorDocument 400 /error404
-ErrorDocument 401 /error404
-ErrorDocument 403 /error404
-ErrorDocument 404 /error404
-ErrorDocument 500 /error404
 
-RewriteRule ^error404(|/)$ /modulos/error404/index.php
+
+# Reglas rapidas
+ErrorDocument 400 /modulos/error404/index.php
+ErrorDocument 401 /modulos/error404/index.php
+ErrorDocument 403 /modulos/error404/index.php
+ErrorDocument 404 /modulos/error404/index.php
+ErrorDocument 500 /modulos/error404/index.php
+
 
 RewriteRule ^(|/)$ /modulos/login/index.php
 RewriteRule ^index(|/)$ /modulos/login/index.php
