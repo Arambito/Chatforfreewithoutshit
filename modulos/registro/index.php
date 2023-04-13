@@ -32,13 +32,15 @@
           <input type="password" name="contrasena_usuario" placeholder="Ingresa tu contraseña" required>
           <i class="fas fa-eye"></i>
         </div>
-        <div>
-          <input type="file" class="select-image" id="imagen_usuario" name="imagen_usuario" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>          
-          <label for="imagen_usuario">
-            <span class="field image">Seleccionar imagen</span>
-            <div id="preview" class="preview-img"></div> <!-- Div para mostrar la vista previa de la imagen -->
-          </label>
-          
+        <div class="field input">
+          <label>Imagen de perfil</label>
+          <div class="image-preview-container">
+            <input type="file" class="select-image" id="imagen_usuario" name="imagen_usuario" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>
+            <label for="imagen_usuario">
+              <span class="field image">Seleccionar imagen</span>
+            </label>
+            <div id="preview" class="preview-img"></div>
+          </div>
         </div>
         <div class="field button">
           <input type="submit" name="submit" value="Registrar">
