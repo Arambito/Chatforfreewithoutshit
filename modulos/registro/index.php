@@ -37,7 +37,7 @@
           <label for="imagen_usuario">
             <span class="field image">Seleccionar imagen</span>
           </label>
-          <div id="preview" class="preview-img"></div> <!-- Div para mostrar la vista previa de la imagen -->
+          <div id="preview"></div> <!-- Div para mostrar la vista previa de la imagen -->
         </div>
         <div class="field button">
           <input type="submit" name="submit" value="Registrar">
