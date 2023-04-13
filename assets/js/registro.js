@@ -38,26 +38,28 @@ cBoton.onclick = () => {
   xhr.send(formChatData);
 }
 
-const inputImage = document.querySelector('.select-image');
-const previewImage = document.querySelector('.preview-img');
+const input = document.querySelector('#imagen_usuario');
+const preview = document.querySelector('#preview');
+const label = document.querySelector('.image-preview label');
+const maxFileNameLength = 20;
 
-inputImage.addEventListener('change', function () {
-  const file = this.files[0];
+input.addEventListener('change', () => {
+  const file = input.files[0];
+  const reader = new FileReader();
+
+  reader.addEventListener('load', () => {
+    preview.src = reader.result;
+    preview.style.display = 'block';
+  });
+
   if (file) {
-    const reader = new FileReader();
-    reader.addEventListener('load', function () {
-      previewImage.style.backgroundImage = `url('${reader.result}')`;
-    });
     reader.readAsDataURL(file);
-  } else {
-    previewImage.style.backgroundImage = null;
+    const fileName = file.name.length > maxFileNameLength ? '<span style="font-weight: 500;">Seleccionado:</span> ' + file.name.substring(0, maxFileNameLength) + '...' : '<span style="font-weight: 500;">Seleccionado:</span> ' + file.name;
+    label.innerHTML = fileName;
+    label.style.width = '90%';
+    label.style.backgroundColor = '#4c7aaf';
+    label.style.lineHeight = '45px';
+    label.style.fontWeight = '100';
   }
-});
-
-const field = document.querySelector('.image-label .field');
-const inputFilename = document.querySelector('.select-image');
-
-inputFilename.addEventListener('change', function () {
-  const filename = inputFilename.value.split('\\').pop().substring(0, 20) + '...';
-  field.textContent = filename;
+  
 });

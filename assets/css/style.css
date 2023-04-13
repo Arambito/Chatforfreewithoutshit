@@ -128,14 +128,37 @@ body{
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
-  position: absolute;
+  /* position: absolute; */
   left: 0;
   right: 0;
   top: 0;
-  bottom: 0;
+  /* bottom: 100px; */
+}
+
+.image-preview {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.image-preview label {
+  width: 100%; /* Ajustar según tus necesidades */
+  height: 45px; /* Ajustar según tus necesidades */
+  /* background-color: #4c7aaf; */
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  /* line-height: 40px; */ /* Ajustar según tus necesidades */
+}
+
+.image-preview img {
+  height: 45px;
+  width: 45px;
+  margin-left: 3%;
+  display: none;
 }
 
 
