@@ -26,7 +26,7 @@ if (!empty($nombre) && !empty($apellido) && !empty($email) && !empty($contrasena
                 if (in_array($img_ext, $extensions) === true) {
                     $types = ["image/jpeg", "image/jpg", "image/png"];
                     if (in_array($img_type, $types) === true) {
-                        if ($img_size <= 3145728) { // Tamaño máximo de 3MB
+                        if ($img_size <= 3145728) { // Tamaño máximo de 3MB :)
                             $time = time();
                             $new_img_name = $time . $img_name;
                             if (move_uploaded_file($tmp_name, "../../assets/images/" . $new_img_name)) {
