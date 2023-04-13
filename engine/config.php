@@ -17,11 +17,11 @@ class Conexion extends mysqli {
 	// Servidor
 	private $host = 'localhost';
 	// Usuario
-	private $user = 'root';
+	private $user = 'u546362297_root';
 	// Contrase�a
-	private $pass = '';
+	private $pass = 'a7nKoE80xq4Si5Q&';
 	// Base de datos
-	private $datab = 'chatphp';
+	private $datab = 'u546362297_chatphp';
 	
 	public function __construct() {
 		
@@ -42,9 +42,9 @@ class datos {
 		
 		$datoss = array(
 		    // URL del sitio web con http://
-			'www'    =>    'http://localhost:6404',
+			'www'    =>    'https://chatforfreewithoutshit.com',
 			// Nombre de tu sitio web
-			'name'   =>    'Chat PHP'
+			'name'   =>    'ChatWoutShit'
 		);
 		
 		return $datoss[$a];
