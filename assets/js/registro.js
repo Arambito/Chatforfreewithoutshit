@@ -38,3 +38,21 @@ cBoton.onclick = ()=>{
     xhr.send(formChatData);
 }
 
+function previewImage() {
+  const inputImagen = document.getElementById('imagen_usuario');
+  const preview = document.getElementById('preview');
+  
+  inputImagen.addEventListener('change', function() {
+    const file = this.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.addEventListener('load', function() {
+        preview.innerHTML = `<img src="${this.result}" alt="Vista previa de la imagen">`;
+      });
+      reader.readAsDataURL(file);
+    } else {
+      preview.innerHTML = '';
+    }
+  });
+}
+
