@@ -182,7 +182,21 @@ body{
 .users header img{
   height: 50px;
   width: 50px;
+  background-color: #ccc;
+  animation: fadeIn 0.4s;
 }
+.image-container {
+  background-color: #ccc;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 2vh;
+}
+
+
 
 .preview-img img {
   height: 50px;
@@ -195,7 +209,7 @@ body{
 }
 :is(.users, .users-list) .content .details{
   color: #000;
-  margin-left: 20px;
+  margin-left: 0px;
 }
 :is(.users, .users-list) .details span{
   font-size: 18px;
@@ -203,7 +217,7 @@ body{
 }
 .users header .logout{
   display: block;
-  background: #333;
+  background: #e14141;
   color: #fff;
   outline: none;
   border: none;
@@ -275,10 +289,11 @@ body{
 
 
 .users-list a img{
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
   object-fit: cover;
   border-radius: 50%;
+  background-color: #ccc;
 }
 .users-list a .details p{
   color: #67676a;
@@ -516,7 +531,30 @@ footer {
 
 
 
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
 
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
 
 @keyframes fadeIn {
   0% { opacity: 0; }
@@ -569,8 +607,8 @@ footer {
     display: none;
   }
   .users header img{
-    height: 45px;
-    width: 45px;
+    height: 50px;
+    width: 50px;
     margin-right: 2vh;
   }
   .users header .logout{

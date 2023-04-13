@@ -48,7 +48,7 @@ setInterval(() =>{
           let data = xhr.response;
           if(!buscarBar.classList.contains("active")){
             screen.style.display = "none"; 
-            screen.style.animation = "fadeOut 0.2s";    
+            screen.style.animation = "fadeOut 0.2s";
             usuarioLista.style.animation = "fadeIn 0.5s";
             usuarioLista.innerHTML = data;
           }

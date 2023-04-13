@@ -18,13 +18,15 @@
               $row = mysqli_fetch_assoc($sql);
             }
           ?>
-          <img src="<?php echo www;?>/assets/images/<?php echo $row['imagen_usuario']; ?>" alt="">
+              <div class="image-container">
+                <img class="usuarioImg" src="<?php echo www;?>/assets/images/<?php echo $row['imagen_usuario']; ?>" alt="">
+              </div>
           <div class="details">
             <span><?php echo $row['nombre_usuario']. " " . $row['apellido_usuario'] ?></span>
             <p><?php echo $row['estado_usuario']; ?></p>
           </div>
         </div>
-        <a href="<?php echo www;?>/engine/funciones/logout.php?id_logout=<?php echo $row['id_unico']; ?>" class="logout">Cerrar Sesión</a>
+        <a href="<?php echo www;?>/engine/funciones/logout.php?id_logout=<?php echo $row['id_unico']; ?>" class="logout"><i class="fas fa-sign-out-alt" style="color: #ffffff"></i></a>
       </header>
       <div class="search">
         <span class="text">¡Escribele a alguien!</span>

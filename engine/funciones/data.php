@@ -94,7 +94,9 @@
         
         $salida .= '<a href="/chat/' . $row['id_unico'] . '/">
             <div class="content">
-                <img src="../../assets/images/' . $row['imagen_usuario'] . '" alt="">
+                <div class="image-container">
+                    <img src="../../assets/images/' . $row['imagen_usuario'] . '" alt="" class="img-literal">
+                </div>
                 <div class="details">
                     <span>' . $row['nombre_usuario'] . " " . $row['apellido_usuario'] . '</span>
                     <p>' . $you . $msg . '</p>
