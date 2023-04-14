@@ -3,8 +3,11 @@
 
     // Si la sesión existe y el tiempo de inactividad ha superado el límite de tiempo, se cierra la sesión
     if (isset($_SESSION['id_unico']) && (time() - $_SESSION['ultimo_acceso']) > 1800) {
+        $estado = "Desconectado ahora";
+          $sql2 = mysqli_query($db, "UPDATE usuario SET estado_usuario = '{$estado}' WHERE id_unico = {$_SESSION['id_unico']}");
         session_unset();
         session_destroy();
+        
         header("Location: /");
         exit;
     }

@@ -2,7 +2,10 @@ const formChat = document.querySelector(".typing-area"),
 id_entrada = formChat.querySelector(".id_entrada").value,
 contenidoChat = formChat.querySelector(".contenido"),
 enviarBoton = formChat.querySelector("button"),
-chatBox = document.querySelector(".chat-box");
+chatBox = document.querySelector(".chat-box"),
+screen = document.querySelector(".contenedor-loader");
+screen.style.display = "block";
+screen.style.animation = "fadeIn 0.2s";   
 
 formChat.onsubmit = (e)=>{
     e.preventDefault();
@@ -24,7 +27,6 @@ enviarBoton.onclick = () => {
       if(xhr.readyState === XMLHttpRequest.DONE){
           if(xhr.status === 200){
               contenidoChat.value = "";
-              scrollToBottom();
           }
       }
     }
@@ -32,6 +34,7 @@ enviarBoton.onclick = () => {
     let formChatData = new FormData(formChat);
 
     xhr.send(formChatData);
+    scrollToBottom()
 }
 chatBox.onmouseenter = () =>{
     chatBox.classList.add("active");
@@ -48,9 +51,11 @@ setInterval(() =>{
       if(xhr.readyState === XMLHttpRequest.DONE){
           if(xhr.status === 200){
             let data = xhr.response;
+            screen.style.display = "none"; 
+            screen.style.animation = "fadeOut 0.2s";
+            chatBox.style.animation = "fadeIn 0.5s";
             chatBox.innerHTML = data;
             if(!chatBox.classList.contains("active")){
-                scrollToBottom();
               }
           }
       }
@@ -63,3 +68,7 @@ const scrollToBottom = () => {
     chatBox.scrollTop = chatBox.scrollHeight;
   }
 
+  window.addEventListener('load', () => {
+    scrollToBottom();
+  });
+  

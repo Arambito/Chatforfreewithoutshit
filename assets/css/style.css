@@ -652,7 +652,7 @@ footer {
   }
   .chat-box {
     min-height: 400px;
-    height: 100%;
+    height: 92%;
     padding: 10px 15px 15px 20px;
     max-height: none;
   }
