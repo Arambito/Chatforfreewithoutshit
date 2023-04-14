@@ -26,6 +26,7 @@
           <p><?php echo $row['estado_usuario']; ?></p>
         </div>
       </header>
+      <div class="contenedor-loader"><div class="loader"><div></div><div></div><div></div></div></div>
       <div class="chat-box">
 
       </div>
