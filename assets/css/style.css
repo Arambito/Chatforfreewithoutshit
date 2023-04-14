@@ -655,6 +655,7 @@ footer {
     height: 92%;
     padding: 10px 15px 15px 20px;
     max-height: none;
+    margin-top: 10%;
   }
   
   .chat-box .outgoing .details {
